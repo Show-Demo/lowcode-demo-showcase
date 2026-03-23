@@ -1,0 +1,91 @@
+:root {
+  font-family:
+    'IBM Plex Sans',
+    'PingFang SC',
+    'Hiragino Sans GB',
+    'Microsoft YaHei',
+    sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color: #163247;
+  background:
+    radial-gradient(circle at top, rgba(255, 213, 161, 0.62), transparent 24%),
+    linear-gradient(180deg, #f6e6cd 0%, #edf4fa 38%, #e6eef3 100%);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+button {
+  border: 0;
+  cursor: pointer;
+  color: inherit;
+  background: linear-gradient(180deg, #0f3852 0%, #144a68 100%);
+  color: #f8fbff;
+  padding: 0 16px;
+  transition:
+    transform 160ms ease,
+    opacity 160ms ease,
+    box-shadow 160ms ease;
+}
+
+button:hover {
+  transform: translateY(-1px);
+}
+
+button.ghost {
+  background: #edf4fa;
+  color: #17354b;
+}
+
+button.danger {
+  background: linear-gradient(180deg, #cf4f4f 0%, #b53333 100%);
+}
+
+input,
+textarea {
+  width: 100%;
+  border: 1px solid rgba(61, 102, 133, 0.18);
+  border-radius: 14px;
+  padding: 12px 14px;
+  background: rgba(255, 255, 255, 0.88);
+  color: #163247;
+  outline: none;
+}
+
+input:focus,
+textarea:focus {
+  border-color: #1570ef;
+  box-shadow: 0 0 0 4px rgba(21, 112, 239, 0.12);
+}
+
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+}
+
+#root {
+  min-height: 100vh;
+}

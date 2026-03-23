@@ -1,0 +1,470 @@
+.app-shell {
+  min-height: 100vh;
+  padding: 18px;
+  color: #10293d;
+}
+
+.topbar,
+.panel,
+.mode-btn,
+.library-card,
+.tree-item,
+.canvas-block,
+.workflow-node,
+.action-card-large,
+.api-step-card,
+.danger-btn {
+  box-shadow: 0 18px 44px rgba(12, 33, 51, 0.08);
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  align-items: center;
+  margin-bottom: 14px;
+}
+
+.topbar-main {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+}
+
+.brand-mark {
+  width: 48px;
+  height: 48px;
+  border-radius: 16px;
+  display: grid;
+  place-items: center;
+  font-weight: 800;
+  background: linear-gradient(135deg, #123c59 0%, #2a7ca8 100%);
+  color: white;
+}
+
+.eyebrow {
+  margin: 0 0 6px;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-size: 12px;
+  color: #708698;
+}
+
+.topbar h1 {
+  margin: 0;
+  font-size: 30px;
+}
+
+.topbar-subtitle {
+  margin: 6px 0 0;
+  color: #667d8f;
+}
+
+.topbar-actions,
+.mode-switch,
+.inline-actions {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.mode-btn,
+.danger-btn {
+  height: 42px;
+  padding: 0 16px;
+  border-radius: 12px;
+}
+
+.mode-btn {
+  background: #edf4fa;
+  color: #16354a;
+}
+
+.mode-btn.is-active {
+  background: linear-gradient(180deg, #123954 0%, #165775 100%);
+  color: white;
+}
+
+.danger-btn {
+  background: linear-gradient(180deg, #d45d5d 0%, #b83b3b 100%);
+  color: white;
+}
+
+.notice-bar {
+  margin-bottom: 14px;
+  padding: 12px 16px;
+  border-radius: 16px;
+  border: 1px solid rgba(88, 118, 140, 0.14);
+  background: rgba(255, 255, 255, 0.76);
+  color: #31506a;
+  font-size: 14px;
+}
+
+.workspace {
+  display: grid;
+  grid-template-columns: 270px minmax(0, 1fr) 340px;
+  gap: 14px;
+  align-items: start;
+}
+
+.left-rail,
+.main-stage,
+.right-rail {
+  min-width: 0;
+}
+
+.panel {
+  padding: 16px;
+  border-radius: 22px;
+  border: 1px solid rgba(88, 118, 140, 0.14);
+  background: rgba(255, 255, 255, 0.86);
+  backdrop-filter: blur(14px);
+}
+
+.left-rail .panel + .panel,
+.right-rail .panel + .panel {
+  margin-top: 14px;
+}
+
+.panel-head {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  align-items: flex-end;
+  margin-bottom: 12px;
+}
+
+.panel-head h2,
+.hero-widget h2,
+.feature-widget h2,
+.form-widget h2,
+.workflow-node h3,
+.sheet-head h2 {
+  margin: 0;
+}
+
+.panel-head span,
+.tree-item small,
+.library-card span,
+.capability-card span,
+.sheet-head span {
+  display: block;
+  font-size: 12px;
+  color: #6f8596;
+}
+
+.library-list,
+.tree-list,
+.field-list,
+.backend-mode-list,
+.action-list-large,
+.api-flow-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.library-card,
+.tree-item,
+.action-card-large,
+.api-step-card {
+  text-align: left;
+  border-radius: 16px;
+  padding: 14px;
+  background: linear-gradient(180deg, #fff 0%, #f5fbff 100%);
+  border: 1px solid rgba(88, 118, 140, 0.12);
+}
+
+.tree-item.is-selected,
+.canvas-block.is-selected,
+.workflow-node.is-selected,
+.action-card-large.is-selected,
+.api-step-card.is-selected {
+  border-color: #1b72ea;
+  box-shadow: 0 0 0 4px rgba(27, 114, 234, 0.1);
+}
+
+.tree-item span,
+.workflow-node-top span,
+.action-card-large span,
+.api-step-card span {
+  display: block;
+  margin-bottom: 4px;
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #6f8596;
+}
+
+.stage-panel {
+  min-height: calc(100vh - 140px);
+}
+
+.canvas,
+.workflow-canvas,
+.backend-sheet {
+  min-height: calc(100vh - 220px);
+  padding: 18px;
+  border-radius: 20px;
+  border: 1px solid rgba(88, 118, 140, 0.12);
+  background:
+    radial-gradient(circle at top left, rgba(255, 203, 151, 0.24), transparent 24%),
+    radial-gradient(circle at top right, rgba(122, 197, 255, 0.16), transparent 24%),
+    linear-gradient(180deg, #fff4e8 0%, #f9fbff 42%, #f2f7fb 100%);
+}
+
+.backend-capability-bar {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.capability-card {
+  padding: 14px;
+  border-radius: 18px;
+  border: 1px solid rgba(88, 118, 140, 0.12);
+  background: linear-gradient(180deg, #ffffff 0%, #f4fbff 100%);
+}
+
+.capability-card strong {
+  display: block;
+  margin-top: 8px;
+  font-size: 18px;
+  color: #17384c;
+}
+
+.capability-card p,
+.explain-list p,
+.workflow-node p,
+.action-card-large p,
+.api-step-card p {
+  margin: 8px 0 0;
+  color: #667d8f;
+  line-height: 1.5;
+}
+
+.drop-line {
+  height: 28px;
+  margin: 6px 0;
+  border-radius: 12px;
+  border: 1px dashed rgba(102, 126, 146, 0.34);
+  display: grid;
+  place-items: center;
+  font-size: 12px;
+  color: #728899;
+}
+
+.drop-line.is-active {
+  border-color: #1b72ea;
+  color: #1b72ea;
+  background: rgba(27, 114, 234, 0.08);
+}
+
+.canvas-block {
+  width: 100%;
+  padding: 0;
+  text-align: left;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1px solid transparent;
+  background: white;
+  color: #16354a;
+}
+
+.hero-widget,
+.feature-widget,
+.form-widget {
+  padding: 22px;
+}
+
+.hero-widget {
+  color: white;
+  background: linear-gradient(135deg, #113650 0%, #165c79 58%, #ec8b3c 150%);
+}
+
+.feature-widget,
+.form-widget {
+  color: #17384c;
+}
+
+.feature-widget p,
+.form-widget p,
+.feature-card,
+.feature-card strong {
+  color: #5f7788;
+}
+
+.feature-widget h2,
+.form-widget h2 {
+  color: #17384c;
+}
+
+.hero-widget span {
+  display: inline-flex;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.14);
+  font-size: 12px;
+}
+
+.hero-widget h2,
+.feature-widget h2,
+.form-widget h2 {
+  margin-top: 12px;
+  font-size: 28px;
+}
+
+.hero-widget strong {
+  display: inline-flex;
+  margin-top: 18px;
+  padding: 12px 18px;
+  border-radius: 12px;
+  background: #fff3e7;
+  color: #9e4d12;
+}
+
+.feature-grid,
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.feature-card {
+  padding: 16px;
+  border-radius: 16px;
+  background: #f3f8fb;
+}
+
+.feature-card strong {
+  color: #17384c;
+}
+
+.form-grid label,
+.field-list label {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.primary-inline {
+  margin-top: 18px;
+  height: 42px;
+  padding: 0 16px;
+  border-radius: 12px;
+  background: linear-gradient(180deg, #123954 0%, #165775 100%);
+  color: white;
+}
+
+.workflow-slot {
+  display: grid;
+  gap: 8px;
+}
+
+.workflow-node {
+  text-align: left;
+  border-radius: 18px;
+  padding: 16px;
+  border: 1px solid rgba(88, 118, 140, 0.12);
+  background: white;
+}
+
+.workflow-node-top {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.workflow-arrow {
+  width: 2px;
+  height: 24px;
+  margin: 0 auto;
+  background: linear-gradient(180deg, #c9d8e5 0%, #7fa8cf 100%);
+}
+
+.sheet-head {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+.model-table {
+  display: grid;
+}
+
+.model-row {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr 1fr;
+}
+
+.model-row span {
+  padding: 11px 10px;
+  border-bottom: 1px solid rgba(88, 118, 140, 0.12);
+  font-size: 14px;
+}
+
+.model-row.is-head span {
+  font-weight: 700;
+}
+
+.action-card-large code {
+  display: inline-flex;
+  margin-top: 10px;
+  padding: 6px 10px;
+  border-radius: 10px;
+  background: #edf4fa;
+  color: #17384c;
+  font-size: 12px;
+}
+
+.section-title {
+  margin: 4px 0 2px;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #61798b;
+}
+
+.schema-editor {
+  min-height: 220px;
+  resize: vertical;
+  font-family: 'SFMono-Regular', Menlo, Consolas, monospace;
+  font-size: 13px;
+}
+
+@media (max-width: 1280px) {
+  .workspace {
+    grid-template-columns: 1fr;
+  }
+
+  .canvas,
+  .workflow-canvas,
+  .backend-sheet {
+    min-height: 560px;
+  }
+
+  .backend-capability-bar {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 760px) {
+  .app-shell {
+    padding: 12px;
+  }
+
+  .topbar,
+  .topbar-main,
+  .topbar-actions,
+  .mode-switch,
+  .feature-grid,
+  .form-grid {
+    display: grid;
+  }
+}
