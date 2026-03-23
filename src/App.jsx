@@ -27,7 +27,7 @@ const frontendMaterials = [
       title: '活动报名表',
       fields: '姓名, 手机号, 公司, 职位',
       buttonText: '提交报名',
-      helperText: '适合市场活动、线索收集、试用申请。',
+      helperText: '常见于活动报名、线索收集和试用申请页面。',
     },
   },
 ]
@@ -125,7 +125,7 @@ function createInitialFrontendState() {
         title: '训练营报名',
         fields: '姓名, 手机号, 公司, 职位',
         buttonText: '立即提交',
-        helperText: '这是典型的前端低代码：页面、表单、组件和样式编排。',
+        helperText: '这块通常由运营或市场同学自己调整，不再等前端排期。',
       },
     ],
   }
@@ -309,7 +309,7 @@ function App() {
 
   function switchMode(nextMode) {
     setMode(nextMode)
-    setNotice(nextMode === 'frontend' ? '当前为前端低代码模式。' : '当前为后端低代码模式。')
+      setNotice(nextMode === 'frontend' ? '已切换到前端低代码模式。' : '已切换到后端低代码模式。')
   }
 
   function updateBackendModel(field, value) {
@@ -594,12 +594,12 @@ function App() {
         <div className="topbar-main">
           <div className="brand-mark">LC</div>
           <div>
-            <p className="eyebrow">低代码产品展示</p>
+            <p className="eyebrow">低代码 Showcase</p>
             <h1>{mode === 'frontend' ? '前端低代码搭建器' : '后端低代码编排器'}</h1>
             <p className="topbar-subtitle">
               {mode === 'frontend'
-                ? '面向活动页、报名页和运营页面的可视化搭建演示。'
-                : '面向模型设计、流程配置、动作编排和接口处理的后端低代码演示。'}
+                ? '把页面、表单和组件拖出来，现场改一改就能看效果。'
+                : '把模型、流程、动作和接口处理拆开看，会更容易理解后端低代码在做什么。'}
             </p>
           </div>
         </div>
@@ -624,7 +624,7 @@ function App() {
             <section className="panel">
               <div className="panel-head">
                 <h2>组件库</h2>
-                <span>拖拽或点击加入页面</span>
+                <span>拖拽进去，或者直接点一下新增</span>
               </div>
               <div className="library-list">
                 {frontendMaterials.map((item) => (
@@ -720,9 +720,9 @@ function App() {
                 <h2>前端低代码能力概览</h2>
               </div>
               <div className="explain-list">
-                <p>支持页面布局、组件编排、表单配置与实时预览。</p>
-                <p>适合活动页、运营页、工作台和数据录入场景的快速搭建。</p>
-                <p>输出结果是一份可交付的页面 Schema，可继续接入运行时或代码生成链路。</p>
+                <p>这一侧主要看页面怎么搭，表单怎么配，组件怎么拖。</p>
+                <p>如果你做过活动页、运营页或者内部工具页，这一块会很眼熟。</p>
+                <p>最后拿到的是页面配置，可以继续接运行时，也可以继续做代码生成。</p>
               </div>
               <textarea className="schema-editor" value={frontendSchema} readOnly />
             </section>
@@ -734,7 +734,7 @@ function App() {
             <section className="panel">
               <div className="panel-head">
                 <h2>后端资源</h2>
-                <span>选择一种后端低代码能力</span>
+                <span>按模型、流程、动作、接口四类来看</span>
               </div>
               <div className="backend-mode-list">
                 <button type="button" className={selectedBackendArea === 'models' ? 'tree-item is-selected' : 'tree-item'} onClick={() => setSelectedBackendArea('models')}>
@@ -794,7 +794,7 @@ function App() {
                         ? '动作编排器'
                         : '接口编排器'}
                 </h2>
-                <span>这部分展示的是后端低代码，不是前端页面搭建</span>
+                <span>这里看的不是页面，而是后端逻辑怎么配出来</span>
               </div>
 
               <div className="backend-capability-bar">
@@ -911,9 +911,9 @@ function App() {
                 <h2>后端低代码能力概览</h2>
               </div>
               <div className="explain-list">
-                <p>核心对象包括数据模型、流程节点、动作链、接口步骤和连接器。</p>
-                <p>通过可视化配置替代重复性的后端控制逻辑编写。</p>
-                <p>适合审批、工单、同步任务、集成编排等业务后台场景。</p>
+                <p>后端这边不搭页面，主要是把模型、流程、动作和接口处理配出来。</p>
+                <p>很多原本要写控制代码、规则判断和系统调用的地方，在这里会被抽成配置。</p>
+                <p>审批、工单、同步任务、集成流程，基本都能套进这类思路里。</p>
               </div>
               <textarea className="schema-editor" value={backendSchema} readOnly />
             </section>
@@ -925,10 +925,10 @@ function App() {
               </div>
               <div className="explain-list">
                 <p>
-                  {selectedBackendArea === 'models' && '当前演示展示的是业务模型定义，可进一步生成表结构、校验规则或持久化配置。'}
-                  {selectedBackendArea === 'workflow' && '当前演示展示的是流程引擎配置，可进一步生成审批流定义或任务路由规则。'}
-                  {selectedBackendArea === 'actions' && '当前演示展示的是动作链配置，可进一步生成通知、落库和集成执行链。'}
-                  {selectedBackendArea === 'api' && '当前演示展示的是接口编排配置，可进一步生成接口处理流程与调用顺序。'}
+                  {selectedBackendArea === 'models' && '这里会更接近表结构、字段校验和持久化配置。'}
+                  {selectedBackendArea === 'workflow' && '这里会更接近流程定义、任务路由和角色分配。'}
+                  {selectedBackendArea === 'actions' && '这里会更接近真正执行的动作链，比如落库、通知和系统同步。'}
+                  {selectedBackendArea === 'api' && '这里会更接近接口处理顺序，包括校验、调用和返回。'}
                 </p>
               </div>
               <textarea className="schema-editor" value={backendGeneratedResult} readOnly />
